@@ -29,7 +29,15 @@ function yes(evt){
         }
 
 
+function finalvalue(){
+    let resultvalue = eval(input.value)
+     input.value = resultvalue
+}
 
+
+
+
+resultoutput.addEventListener('click',finalvalue)
 
 btn.addEventListener('click',(evt)=>{
      yes(evt)
