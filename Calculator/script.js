@@ -34,8 +34,14 @@ function finalvalue(){
      input.value = resultvalue
 }
 
+function clearoutput(){
+     str = '' 
+     input.value = str
+     count = 0
+}
 
 
+clear.addEventListener('click',clearoutput)
 
 resultoutput.addEventListener('click',finalvalue)
 
