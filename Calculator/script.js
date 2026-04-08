@@ -3,8 +3,6 @@ let input = document.querySelector('input')
 let resultoutput = document.querySelector('.result')
 let clear = document.querySelector('.clear')
 
- 
-
 function yes(evt){
    let value = evt.target.innerText
    let lastchar = input.value.slice(-1)
@@ -21,9 +19,12 @@ function yes(evt){
   }
 }
 
-function finalvalue(){
-    let resultvalue = eval(input.value)
-     input.value = resultvalue
+function finalvalue() {
+  try {
+    input.value = math.evaluate(input.value);
+  } catch {
+    input.value = "Error";
+  }
 }
 
 function clearoutput(){
