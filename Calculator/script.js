@@ -6,41 +6,20 @@ let clear = document.querySelector('.clear')
  
 
 function yes(evt){
+   let value = evt.target.innerText
+   let lastchar = input.value.slice(-1)
+   let operators = ['+', '/' ,'*' , '-']
 
-  if(evt.target.innerText==='1'||
-     evt.target.innerText==='2'||
-     evt.target.innerText==='3'||
-     evt.target.innerText==='4'||
-     evt.target.innerText==='5'||
-     evt.target.innerText==='6'||
-     evt.target.innerText==='7'||
-     evt.target.innerText==='8'||
-     evt.target.innerText==='9'||
-     evt.target.innerText==='0'||
-     evt.target.innerText==='.'
-  ){
-     input.value =  input.value.concat(evt.target.innerText)
-  }
+   if(!isNaN(value) || value ==='.'){
+      input.value +=  value
+   }
 
-  if(evt.target.innerText==='+'||
-     evt.target.innerText==='-'||
-     evt.target.innerText==='/'||
-     evt.target.innerText==='*'){
-        if(input.value.endsWith('1') ||
-           input.value.endsWith('2') ||
-           input.value.endsWith('3') ||
-           input.value.endsWith('4') ||
-           input.value.endsWith('5') ||
-           input.value.endsWith('6') ||
-           input.value.endsWith('7') ||
-           input.value.endsWith('8') ||
-           input.value.endsWith('9') ||
-           input.value.endsWith('0') ){
-            
-           input.value =  input.value.concat(evt.target.innerText)    
-      }
+   if(!operators.includes(lastchar)){
+   if(operators.includes(value) && input.value!==''){
+       input.value +=  value
     }
   }
+}
 
 function finalvalue(){
     let resultvalue = eval(input.value)
