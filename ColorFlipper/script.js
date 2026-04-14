@@ -2,13 +2,15 @@ let div = document.querySelector('div')
 let btn = document.querySelector('button')
 
 
+function randomcolor(){
+    return Math.floor(Math.random()*256)
+}
+
+function getcolor(){
+    return `rgb(${randomcolor()},${randomcolor()},${randomcolor()})`
+}
+
 btn.addEventListener('click',()=>{
-    let random = Math.random()
-    let random2 = Math.random()
-    let random3 = Math.random()
-
-let color = `rgb(${Math.floor(random*255)},${Math.floor(random2*255)},${Math.floor(random3*255)})`
-
-div.style.backgroundColor = color;
-console.log(color);
+    let color = getcolor();
+    div.style.backgroundColor = color
 })
