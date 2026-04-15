@@ -3,6 +3,7 @@ project Done:
 Todo App
 Calculator
 Weather App
+colorflipper
 
 Project to be Completed:
 How to create a restaurant menu page
