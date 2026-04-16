@@ -3,7 +3,7 @@ let menusymbol = document.querySelector('.ri-menu-line')
 let closesymbol = document.querySelector('.ri-close-fill')
 
 function display(){
-    innercontainer.classList.remove('display')
+  innercontainer.classList.remove('display')
 }
 
 function remove(){

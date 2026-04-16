@@ -21,7 +21,8 @@ body{
     height: 100%;
     background-color: white;
     width: 25%;
-   
+  display: flex;
+  flex-direction: column;
 }
 
 .heading{
@@ -65,4 +66,83 @@ h2{
 
 .display{
     display: none;
+}
+
+@media (max-width:600px) {
+    .container2{
+    height: 100%;
+    background-color: white;
+    width: 30%;
+}
+.heading{
+    padding: 10px 5px;
+}
+.heading h2{
+    font-size: 1.1rem;
+}
+.ri-close-fill{
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+}
+.tags{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 6px;
+    margin-top: 25px;
+    gap: 25px;
+    font-size: small;
+}
+.tag{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+}
+
+@media (max-width:540px) {
+    .heading h2{
+        font-size: medium;
+    }
+    .ri-close-fill{
+        font-size: 15px;
+    }
+    .tags{
+        font-size: smaller;
+    }
+}
+
+@media (max-width:460px) {
+    .heading h2{
+        font-size: 0.9rem;
+    }
+    .ri-close-fill{
+        font-size: 15px;
+    }
+    .tags{
+        font-size: x-small;
+    }
+}
+
+@media (max-width:412px) {
+    .heading h2{
+        font-size: 0.8rem;
+    }
+    .ri-close-fill{
+        font-size: 13px;
+    }
+    .tags{
+        font-size: x-small;
+    }
+}
+
+@media (max-width:403px) {
+    .heading h2{
+        font-size: 0.7rem;
+    }
+    .ri-close-fill{
+        font-size: 13px;
+    }
+    .tags{
+        font-size: x-small;
+    }
 }
