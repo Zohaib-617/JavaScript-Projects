@@ -9,3 +9,60 @@ body{
     width: 100%;
     background-color: rgb(206, 223, 217);
 }
+
+.container{
+     height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container2{
+    height: 100%;
+    background-color: white;
+    width: 25%;
+   
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
+h2{
+     font-family: Arial, Helvetica, sans-serif;
+}
+.h2span{
+     font-family: Arial, Helvetica, sans-serif;
+    color: rgb(58, 58, 173);
+}
+.ri-close-fill{
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+}
+
+.tags{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    margin-top: 30px;
+    gap: 30px;
+}
+.tag{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menuicon{
+    padding: 20px 20px;
+}
+.ri-menu-line{
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.display{
+    display: none;
+}
