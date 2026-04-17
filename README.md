@@ -4,6 +4,7 @@ Todo App
 Calculator
 Weather App
 colorflipper
+ResponsiveSidebar
 
 Project to be Completed:
 How to create a restaurant menu page
