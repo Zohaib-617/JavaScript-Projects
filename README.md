@@ -4,8 +4,11 @@ Todo App
 Calculator
 Weather App
 colorflipper
+ResponsiveSidebar
 
 Project to be Completed:
+how to create a hamburger navbar
+How to create a modal
 How to create a restaurant menu page
 How to create a video background
 How to create a navigation bar on scroll
