@@ -30,22 +30,39 @@ body{
     left: 20%;
     display: flex;
     padding: 10px 20px;
-    background-color: aqua;
+    background-color: #fefefe;
     width: 50%;
-    height: 50%px;
+    height: 80%;
     justify-content: space-between;
 }
 input{
-    padding: 5px 10px;
+    padding: 8px 10px;
+    border-radius: 5px;
+   outline: 2px solid;
+   border: none;
+    width: 70%;
 }
 .heading{
-    background-color: brown;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 85%;
+    height:80% ;
     align-items: center;
 }
+.Signupcontent{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+.Signupcontent p{
+    font-size: medium;
+    font-weight: bold;
+    font-family:  Helvetica;
+}
+
+
 .span{
     font-size: 20px;
     font-weight: bolder;
@@ -57,4 +74,33 @@ input{
 }
 .span:active{
     scale: 10;
+}
+
+.Signup{
+    position: absolute;
+    top: 9%;
+    left: 42%;
+}
+.password-text{
+    position: absolute;
+    top: 93%;
+    left: 39%;
+    cursor: pointer;
+}
+.password-text:hover{
+    color: blue;
+}
+
+.Signup-btn-div{
+   margin-top: 60px;
+}
+.Signup-btn{
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: grey;
+}
+.Signup-btn:active{
+    scale: 1.01;
 }
