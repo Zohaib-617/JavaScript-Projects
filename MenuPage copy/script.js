@@ -4,6 +4,12 @@ let lunchbtn = document.querySelector('#lunch-btn')
 let dinnerbtn = document.querySelector('#dinner-btn')
 let breakfastcontainer = document.querySelector('.breakfast-container')
 
+let modalcontent = document.querySelector('.modal-content')
+let modalimg = document.querySelector('.modal-img')
+let modalh4 = document.querySelector('.modal-h4')
+let modalspan = document.querySelector('.modal-span')
+let modalpara = document.querySelector('.modal-para')
+
 let breakfast = [   
      {      "name": "Pancakes",      "price": '$5.99',      "description": "Fluffy pancakes served with maple syrup and butter.",      "image": "https://images.pexels.com/photos/21820995/pexels-photo-21820995.jpeg"    },   
      {      "name": "Omelette",      "price": '$4.99',      "description": "Three-egg omelette with cheese, onions, and peppers.",      "image": "https://picsum.photos/seed/omelette/400/300"    },   
@@ -124,7 +130,7 @@ function breakfastdishes(){
   breakfastcontainer.innerHTML = ''
   
  breakfast.map((elem)=>{
-   const outerDiv = document.createElement("div");
+   var outerDiv = document.createElement("div");
 outerDiv.className = "outer-breakfast";
 
 // Image container
@@ -170,8 +176,19 @@ outerDiv.appendChild(descDiv);
 // Finally append to body (or any container)
 breakfastcontainer.appendChild(outerDiv);
 
- })
 
+outerDiv.addEventListener('click',(e)=>{
+ if(e.target==img){
+  console.log(e.target);
+  
+   modalcontent.style.display = 'flex'
+   modalimg.src = elem.image
+   modalh4.textContent = elem.name
+   modalspan.textContent = elem.price
+   modalpara.textContent = elem.description
+ }
+ })
+ })
 }
 
 function lunchdishes(){
@@ -223,6 +240,17 @@ outerDiv.appendChild(descDiv);
 // Finally append to body (or any container)
 breakfastcontainer.appendChild(outerDiv);
 
+outerDiv.addEventListener('click',(e)=>{
+ if(e.target==img){
+  console.log(e.target);
+  
+   modalcontent.style.display = 'flex'
+   modalimg.src = elem.image
+   modalh4.textContent = elem.name
+   modalspan.textContent = elem.price
+   modalpara.textContent = elem.description
+ }
+ })
  })
 
 }
@@ -276,6 +304,17 @@ outerDiv.appendChild(descDiv);
 // Finally append to body (or any container)
 breakfastcontainer.appendChild(outerDiv);
 
+outerDiv.addEventListener('click',(e)=>{
+ if(e.target==img){
+  console.log(e.target);
+  
+   modalcontent.style.display = 'flex'
+   modalimg.src = elem.image
+   modalh4.textContent = elem.name
+   modalspan.textContent = elem.price
+   modalpara.textContent = elem.description
+ }
+ })
  })
 
 }
@@ -340,3 +379,6 @@ breakfastbtn.addEventListener('click',()=>{
 lunchbtn.addEventListener('click',lunchdishes)
 dinnerbtn.addEventListener('click',dinnerdishes)
 Allbtn.addEventListener('click',Alldishes)
+
+
+
