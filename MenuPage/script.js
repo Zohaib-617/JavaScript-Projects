@@ -16,9 +16,6 @@ let lunchbtn = document.querySelector('#lunch-btn')
 let dinnerbtn = document.querySelector('#dinner-btn')
 
 
-
-
-
 let breakfast = [   
      {      "name": "Pancakes",      "price": '$5.99',      "description": "Fluffy pancakes served with maple syrup and butter.",      "image": "https://images.pexels.com/photos/21820995/pexels-photo-21820995.jpeg"    },   
      {      "name": "Omelette",      "price": '$4.99',      "description": "Three-egg omelette with cheese, onions, and peppers.",      "image": "https://picsum.photos/seed/omelette/400/300"    },   
@@ -80,7 +77,47 @@ let dinner = [
   }
 ]
 
+let Alldishes = [
+    {      "name": "Pancakes",      "price": '$5.99',      "description": "Fluffy pancakes served with maple syrup and butter.",      "image": "https://images.pexels.com/photos/21820995/pexels-photo-21820995.jpeg"    },   
+     {      "name": "Omelette",      "price": '$4.99',      "description": "Three-egg omelette with cheese, onions, and peppers.",      "image": "https://picsum.photos/seed/omelette/400/300"    },   
+      {
+      "name": "Grilled Chicken Sandwich",
+      "price": '$7.99',
+      "description": "Grilled chicken breast with lettuce, tomato, and mayo.",
+      "image": "https://picsum.photos/seed/chickensandwich/400/300"
+    },
+    {
+      "name": "Caesar Salad",
+      "price": '$6.49',
+      "description": "Crisp romaine lettuce with Caesar dressing and croutons.",
+      "image": "https://picsum.photos/seed/caesarsalad/400/300"
+    },
+     {
+    "name": "Margherita Pizza",
+    "price": "$12.50",
+    "description": "Classic Italian pizza topped with fresh mozzarella, tomatoes, and basil leaves. Baked in a wood-fired oven for a crispy crust. Simple, fresh, and delicious.",
+    "image": "https://images.pexels.com/photos/31596394/pexels-photo-31596394.jpeg"
+  },
+  {
+    "name": "Salmon with Lemon Butter Sauce",
+    "price": "$17.75",
+    "description": "Pan-seared salmon fillet drizzled with a tangy lemon butter sauce. Served with steamed vegetables and rice. Light yet flavorful dinner option.",
+    "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288"
+  },
+  {
+    "name": "Grilled Chicken Alfredo",
+    "price": '$14.99',
+    "description": "Creamy Alfredo pasta topped with perfectly grilled chicken breast. The rich parmesan sauce blends beautifully with tender fettuccine. A comforting and satisfying dinner classic.",
+    "image": "https://images.unsplash.com/photo-1603133872878-684f208fb84b"
+  },
+  {
+    "name": "Beef Steak with Garlic Butter",
+    "price": "$19.99",
+    "description": "Juicy grilled beef steak cooked to perfection and topped with garlic herb butter. Served with a side of roasted vegetables. A hearty meal packed with flavor.",
+    "image": "https://images.pexels.com/photos/7159268/pexels-photo-7159268.jpeg"
+  },
 
+]
 
 function breakfast1(){
   for (let i = 0; i < breakfast.length; i++) {
@@ -117,6 +154,7 @@ function dinner1(){
     } 
   }
 }
+
 
 
 
