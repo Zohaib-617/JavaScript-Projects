@@ -5,10 +5,29 @@ let dinnerbtn = document.querySelector('#dinner-btn')
 let breakfastcontainer = document.querySelector('.breakfast-container')
 
 let modalcontent = document.querySelector('.modal-content')
+let modal = document.querySelector('.modal')
 let modalimg = document.querySelector('.modal-img')
 let modalh4 = document.querySelector('.modal-h4')
 let modalspan = document.querySelector('.modal-span')
 let modalpara = document.querySelector('.modal-para')
+let closebtn = document.querySelector('.close-btn')
+
+
+function openModal(elem) {
+  modalcontent.style.display = 'flex'
+  modal.classList.add('blur-background')
+  modalimg.src = elem.image
+  modalh4.textContent = elem.name
+  modalspan.textContent = elem.price
+  modalpara.textContent = elem.description
+}
+
+function closemodal(){
+  modalcontent.style.display = 'none'
+   modal.classList.remove('blur-background')
+}
+
+
 
 let breakfast = [   
      {      "name": "Pancakes",      "price": '$5.99',      "description": "Fluffy pancakes served with maple syrup and butter.",      "image": "https://images.pexels.com/photos/21820995/pexels-photo-21820995.jpeg"    },   
@@ -180,12 +199,7 @@ breakfastcontainer.appendChild(outerDiv);
 outerDiv.addEventListener('click',(e)=>{
  if(e.target==img){
   console.log(e.target);
-  
-   modalcontent.style.display = 'flex'
-   modalimg.src = elem.image
-   modalh4.textContent = elem.name
-   modalspan.textContent = elem.price
-   modalpara.textContent = elem.description
+  openModal(elem)
  }
  })
  })
@@ -243,12 +257,7 @@ breakfastcontainer.appendChild(outerDiv);
 outerDiv.addEventListener('click',(e)=>{
  if(e.target==img){
   console.log(e.target);
-  
-   modalcontent.style.display = 'flex'
-   modalimg.src = elem.image
-   modalh4.textContent = elem.name
-   modalspan.textContent = elem.price
-   modalpara.textContent = elem.description
+  openModal(elem)
  }
  })
  })
@@ -307,12 +316,7 @@ breakfastcontainer.appendChild(outerDiv);
 outerDiv.addEventListener('click',(e)=>{
  if(e.target==img){
   console.log(e.target);
-  
-   modalcontent.style.display = 'flex'
-   modalimg.src = elem.image
-   modalh4.textContent = elem.name
-   modalspan.textContent = elem.price
-   modalpara.textContent = elem.description
+  openModal(elem)
  }
  })
  })
@@ -368,6 +372,12 @@ outerDiv.appendChild(descDiv);
 // Finally append to body (or any container)
 breakfastcontainer.appendChild(outerDiv);
 
+outerDiv.addEventListener('click',(e)=>{
+ if(e.target==img){
+  console.log(e.target);
+  openModal(elem)
+ }
+ })
  })
 
 }
@@ -380,5 +390,12 @@ lunchbtn.addEventListener('click',lunchdishes)
 dinnerbtn.addEventListener('click',dinnerdishes)
 Allbtn.addEventListener('click',Alldishes)
 
+closebtn.addEventListener('click',closemodal)
 
-
+modal.addEventListener('click', (e) => {
+  if (e.target == modalcontent) {
+    modalcontent.style.display = 'none'
+    modal.classList.remove('blur-background')
+    console.log('hey');
+  }
+})
