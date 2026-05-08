@@ -7,9 +7,10 @@ colorflipper
 ResponsiveSidebar
 How to create a modal
 How to create a restaurant menu page
+How to create a video background
+FAQ Page
 
 Project to be Completed:
-How to create a video background
 How to create a navigation bar on scroll
 How to create tabs that display different content
 How to create a countdown clock
