@@ -1,32 +1,3 @@
-//  var count = 10
-
-//  let time = setInterval(()=>{
-//     if(count>0){
-//       console.log(count);
-//       count--
-      
-      
-//     }
-//     else {
-//       clearInterval(time)
-//       console.log('hey');
-//     }
-//  },500)
-
-// let arr1 = [1,2,3,4]
-// let arr2 = [1,2,3,8]
-// let str1 = arr1.join('')
-// let str2 = arr2.join('')
-
-
-// if(str1==str2){
-//   console.log('matched');
-  
-// }
-// else console.log('wrong');
-
-
-
 let innerdivs = document.querySelectorAll('.innerdiv')
 let input = document.querySelector('input')
 let comparebtn = document.querySelector('.compare-btn')
@@ -41,14 +12,6 @@ let innerdivid4 = document.querySelector('#box4')
 
 let result = [];
 let inputval = []
-for(let innerdiv of innerdivs){
-  
-  innerdiv.addEventListener('click',(e)=>{
-    let text = e.target.textContent
-     result.push(text)
-      console.log(result);
-  })
-}
 
 function addvalues(){
  if(input.value =='' || result==[]) return
@@ -80,47 +43,55 @@ function compare(){
 }
 
 let count = 7;
+
+function restartGlow(div, glowClass){
+
+    innerdivid1.classList.remove('glow-box1')
+    innerdivid2.classList.remove('glow-box2')
+    innerdivid3.classList.remove('glow-box3')
+    innerdivid4.classList.remove('glow-box4')
+
+    setTimeout(() => {
+        div.classList.add(glowClass)
+    },500)
+}
+
 function start(){
+
  let count2 = 1
  let red = 0
  let green = 1
  let blue = 2
  let yellow = 3
  
-     
-    let colorchange = setInterval(()=>{
+ let colorchange = setInterval(()=>{
  let random =  Math.floor(Math.random()*4)
       console.log(random);
       
-        if(random == red){
-        innerdivid1.classList.add('glow-box1')
-        innerdivid2.classList.remove('glow-box2')
-         innerdivid3.classList.remove('glow-box3')
-          innerdivid4.classList.remove('glow-box4')
-        console.log('hellored');
-      }
-     else if(random == green){
-        innerdivid2.classList.add('glow-box2')
-        innerdivid1.classList.remove('glow-box1')
-         innerdivid3.classList.remove('glow-box3')
-          innerdivid4.classList.remove('glow-box4')
-        console.log('hellogreen');
-     }
-      else if(random ==blue){
-       innerdivid2.classList.remove('glow-box2')
-        innerdivid1.classList.remove('glow-box1')
-         innerdivid3.classList.add('glow-box3')
-          innerdivid4.classList.remove('glow-box4')
-        console.log('hellogreen');
-       }
-     
-      else if(random == yellow) {
-        innerdivid2.classList.remove('glow-box2')
-        innerdivid1.classList.remove('glow-box1')
-         innerdivid3.classList.remove('glow-box3')
-          innerdivid4.classList.add('glow-box4')
-        console.log('hellogreen');
-     }
+    if(random == red){
+
+    restartGlow(innerdivid1, 'glow-box1')
+    result.push(innerdivid1.textContent)
+
+}
+else if(random == green){
+
+    restartGlow(innerdivid2, 'glow-box2')
+    result.push(innerdivid2.textContent)
+
+}
+else if(random == blue){
+
+    restartGlow(innerdivid3, 'glow-box3')
+    result.push(innerdivid3.textContent)
+
+}
+else if(random == yellow){
+
+    restartGlow(innerdivid4, 'glow-box4')
+    result.push(innerdivid4.textContent)
+
+}
       
     if(count == count2){
       count += 3;
@@ -131,7 +102,6 @@ function start(){
     }
   },1500)
  }
-
 
 addbtn.addEventListener('click',addvalues)
 comparebtn.addEventListener('click',compare)
