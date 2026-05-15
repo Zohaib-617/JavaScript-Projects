@@ -13,14 +13,14 @@ let innerdivid4 = document.querySelector('#box4')
 
 let result = [];
 let inputval = []
-let count = 7;
+let count = 5;
 
 function addvaluesbyclick(e){
   inputval.push(e.target.textContent)
  inputstorage.textContent = inputval
  resultheading.textContent = ''
  }
- 
+
 for(let innerdiv of innerdivs){
   innerdiv.addEventListener('click',(e)=>{
    addvaluesbyclick(e)
@@ -33,23 +33,22 @@ inputstorage.textContent = inputval
 }
 
 function compare(){
-    if(input.value == '' && inputval===[]) return
-
-    else{
       let finalresult = result.join('')
   let finalval = inputval.join('')
   if(finalresult==finalval){
+    inputstorage.textContent = ''
    resultheading.textContent = 'Correct Sequence'
     result = [];
     inputval = [];
   }
  else {
+  inputstorage.textContent = ''
    resultheading.textContent = 'Wrong Sequence'
    result = [];
     inputval = [];
   }
+  startbtn.disabled = false;
  }
-}
 
 function restartGlow(div, glowClass){
 
@@ -64,6 +63,7 @@ function restartGlow(div, glowClass){
 }
 
 function start(){
+  startbtn.disabled = true
 
  let count2 = 1
  let red = 0
@@ -101,7 +101,7 @@ else if(random == yellow){
 }
       
     if(count == count2){
-      count += 3;
+      count += 2;
       clearInterval(colorchange)
     }
     else{
