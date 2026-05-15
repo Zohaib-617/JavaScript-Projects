@@ -97,13 +97,14 @@ body h1{
     scale: 1.01;
 }
 
-.input-button  input{
+.input-button p{
     width: 50%;
     height: 30px;
     padding: 0 20px;
     border-radius: 5px;
     border: none;
     outline: 1px solid;
+    padding-top: 5px;
 }
 .buttondiv{
     padding: 10px 0;

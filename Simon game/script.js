@@ -4,6 +4,7 @@ let comparebtn = document.querySelector('.compare-btn')
 let addbtn = document.querySelector('.add-btn')
 let resultheading = document.querySelector('.result-heading')
 let startbtn = document.querySelector('.start-btn')
+let inputstorage = document.querySelector('.input-storage')
 
 let innerdivid1 = document.querySelector('#box1')
 let innerdivid2 = document.querySelector('#box2')
@@ -12,15 +13,23 @@ let innerdivid4 = document.querySelector('#box4')
 
 let result = [];
 let inputval = []
+let count = 7;
 
-function addvalues(){
- if(input.value =='' || result==[]) return
- else{
-  inputval.push(input.value)
- console.log(inputval);
- input.value = ''
+function addvaluesbyclick(e){
+  inputval.push(e.target.textContent)
+ inputstorage.textContent = inputval
+ resultheading.textContent = ''
  }
  
+for(let innerdiv of innerdivs){
+  innerdiv.addEventListener('click',(e)=>{
+   addvaluesbyclick(e)
+  })
+}
+
+function removevalues(){
+inputval.pop()
+inputstorage.textContent = inputval
 }
 
 function compare(){
@@ -41,8 +50,6 @@ function compare(){
   }
  }
 }
-
-let count = 7;
 
 function restartGlow(div, glowClass){
 
@@ -103,7 +110,7 @@ else if(random == yellow){
   },1500)
  }
 
-addbtn.addEventListener('click',addvalues)
+addbtn.addEventListener('click',removevalues)
 comparebtn.addEventListener('click',compare)
 startbtn.addEventListener('click',start)
 
