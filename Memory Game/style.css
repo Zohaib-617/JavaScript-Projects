@@ -103,6 +103,27 @@ body{
     transform: rotateY(180deg);
 }
 
-.disable{
-   cursor: crosshair;
+.reset-btn{
+    margin-top: 10px;
+    padding: 5px 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: gray;
+    font-size: medium;
+    cursor: pointer;
+}
+.reset-btn:active{
+    scale: 1.01;
+}
+.start-btn{
+    margin-top: 10px;
+    padding: 5px 15px;
+    border-radius: 8px;
+    border: none;
+    background-color: gray;
+    font-size: medium;
+    cursor: pointer;
+}
+.start-btn:active{
+    scale: 1.01;
 }
