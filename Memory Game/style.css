@@ -22,8 +22,7 @@ body{
     display: grid;
      grid-template-columns: 100px 100px 100px 100px ;
     padding: 15px 0;
-    perspective: 1000px; /* 3D depth */
-    background-color: brown;
+    perspective: 1000px; 
     justify-content: space-evenly;
 }
 
