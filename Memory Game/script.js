@@ -19,6 +19,7 @@ let turn = 'player1'
 //showing cards at the beginning
 function showcards(){
     startbtn.disabled = true
+    playerheading.textContent = 'Player1'
     for(let cardinner of cardinners){
    setTimeout(()=>{
      cardinner.classList.add('card-inner-flip')
@@ -129,6 +130,10 @@ for(let cardinner of cardinners){
 
 //reseting the game
 function resetgame(){ 
+    player1_pair = [];
+    player2_pair = [];
+    playerheading.textContent = 'Start Game'
+    pairheading.textContent = ''
     startbtn.disabled = false
     cardinners.forEach((card)=>{
   card.classList.remove('card-inner-flip')
