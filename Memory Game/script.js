@@ -27,7 +27,7 @@ function showcards(){
 
    setTimeout(()=>{
      cardinner.classList.remove('card-inner-flip')
-   },1500)
+   },1800)
 }
     while(children.length){
         frag.appendChild(children[Math.floor(Math.random() * children.length)])
