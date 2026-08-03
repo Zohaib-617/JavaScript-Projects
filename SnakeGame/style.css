@@ -18,14 +18,14 @@ main{
 header{
     width: 100%;
     text-align: center;
-   
+   background-color: red;
 }
 
 .score{
     display: flex;
    justify-content: center;
    gap: 50px;
-   padding-top: 30px;
+   padding-top: 10px;
    background-color: gray;
 }
 
@@ -38,16 +38,19 @@ header{
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 20px;
+  
 }
 
 
 .innercontainer{
     border: 2px solid black;
-  height: 100%;
-  width: 90%;
+  height: 600px;
+  width: 600px;
   border-radius: 15px;
   background-color: lightgoldenrodyellow;
+  display: grid;
+grid-template-columns: repeat(20, 1fr);
+grid-template-rows: repeat(20, 1fr);
 }
 
 .startbtn{
@@ -65,4 +68,8 @@ header{
 }
 .startbtn button:active{
     scale: 1.01;
+}
+
+.cell{
+    border: 1px solid #333;
 }
