@@ -14,3 +14,4 @@ How to create a Simon Game
 
 Project to be Completed:
 How to create a Tetris game
+Snake Game
