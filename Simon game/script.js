@@ -14,7 +14,7 @@ let innerdivid4 = document.querySelector('#box4')
 let result = [];
 let inputval = []
 let count = 5;
-
+let val1 = compare();
 function addvaluesbyclick(e){
   inputval.push(e.target.textContent)
  inputstorage.textContent = inputval
@@ -48,8 +48,15 @@ function compare(){
     inputval = [];
   }
   startbtn.disabled = false;
- }
 
+  return{
+    finalval ,
+    finalresult,
+    result,
+    inputval,
+  }
+ }
+ 
 function restartGlow(div, glowClass){
 
     innerdivid1.classList.remove('glow-box1')
@@ -65,6 +72,7 @@ function restartGlow(div, glowClass){
 function start(){
   startbtn.disabled = true
 
+ 
  let count2 = 1
  let red = 0
  let green = 1
@@ -73,7 +81,7 @@ function start(){
  
  let colorchange = setInterval(()=>{
  let random =  Math.floor(Math.random()*4)
-      console.log(random);
+      
       
     if(random == red){
 
@@ -101,8 +109,17 @@ else if(random == yellow){
 }
       
     if(count == count2){
-      count += 2;
+      
       clearInterval(colorchange)
+
+      if(val1.inputval.join('') ==='') return;
+      if(val1.result.join('') !== val1.inputval.join('') ){
+       return;
+        
+      }
+      else if(val1.result.join('') === val1.inputval.join('')){
+         count += 2;
+      }
     }
     else{
       count2++;
@@ -114,6 +131,3 @@ addbtn.addEventListener('click',removevalues)
 comparebtn.addEventListener('click',compare)
 startbtn.addEventListener('click',start)
 
-
-
-  
