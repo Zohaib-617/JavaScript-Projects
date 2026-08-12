@@ -14,4 +14,3 @@ How to create a Simon Game
 
 Project to be Completed:
 Tetris Game
-SnakeGame
